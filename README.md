@@ -8,11 +8,12 @@ Usage:
 
     git clone https://github.com/geoffleyland/heroku-buildpack-openresty-template.git
     cd heroku-buildpack-openresty-template
-    heroku app:create hbo-template
+    heroku apps:create hbo-template
     heroku buildpack:set https://github.com/geoffleyland/heroku-buildpack-openresty
     git push heroku master
 
-(you'll need to change the app name in `heroku app:create hbo-template`)
+(you'll need to change the app name in `heroku app:create hbo-template`
+since I'm using `hbo-template` already)
 
 It'll spend quite a while building LuaJIT, Openresty and LuaRocks, but then,
 with a bit of luck, you should be able to visit
