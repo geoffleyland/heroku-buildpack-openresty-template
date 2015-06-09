@@ -4,6 +4,7 @@
     <title>heroku-buildpack-openresty-template demo</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
   </head>
 
   <body>
@@ -15,50 +16,9 @@
     <p>
       Next, type something here: <input type="text" onkeyup="reverse(this.value);"/>
     </p><p>
-      If it appears reversed here: <span id="reversed" style="border: 1px solid grey; padding: 5px;"></span>&nbsp;
+      If it appears reversed here: <span id="reversed"></span>&nbsp;
       then Lua on the server is working as well!
     </p>
-    <script type="text/javascript">
-
-function compileURI(uri, options)
-{
-  if (options && options.params)
-  {
-    var parameters = [];
-    for (key in options.params)
-    {
-      var value = options.params[key];
-      if (value != null)
-        parameters.push(encodeURIComponent(key) + "=" + encodeURIComponent(value));
-    }
-    parameters = parameters.join("&");
-    if (parameters != "")
-      uri += "?" + parameters
-  }
-  return uri;
-}
-
-
-function request(method, uri, options, data, f)
-{
-  var request = new XMLHttpRequest();
-
-  request.onreadystatechange = function()
-  {
-    if (request.readyState == 4)
-      f(request.status, request.responseText);
-  };
-  request.open(method, compileURI(uri, options), true);
-  request.send(data);
-}
-
-
-function reverse(s)
-{
-  request("GET", "/api/v0/reverse", { params: { "w": s }}, null,
-    function(status, text) { document.getElementById("reversed").innerHTML = text; });
-}
-
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>

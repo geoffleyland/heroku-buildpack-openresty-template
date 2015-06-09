@@ -1,0 +1,10 @@
+html
+{
+  font-family: sans-serif;
+}
+
+#reversed
+{
+  border: 1px solid grey;
+  padding: 5px;
+}
