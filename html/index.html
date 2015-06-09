@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
-  <body class="column">
-  <h1>It works!</h1>
+  <body>
+    <h1>It works!</h1>
 
-  <p>
-    If you can see this, the openresty server is up and working.
-  </p>
-  <p>
-    Next, type something here: <input type="text" onkeyup="reverse(this.value);"/>
-  </p><p>
-    If it appears reversed here: <span id="reversed" style="border: 1px solid grey; padding: 5px;"></span>&nbsp;
-    then Lua on the server is working as well!
-  </p>
-  <script type="text/javascript">
+    <p>
+      If you can see this, the openresty server is up and working.
+    </p>
+    <p>
+      Next, type something here: <input type="text" onkeyup="reverse(this.value);"/>
+    </p><p>
+      If it appears reversed here: <span id="reversed" style="border: 1px solid grey; padding: 5px;"></span>&nbsp;
+      then Lua on the server is working as well!
+    </p>
+    <script type="text/javascript">
 
 function compileURI(uri, options)
 {
@@ -59,6 +59,6 @@ function reverse(s)
     function(status, text) { document.getElementById("reversed").innerHTML = text; });
 }
 
-  </script>
-</body>
+    </script>
+  </body>
 </html>
