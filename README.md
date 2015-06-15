@@ -9,7 +9,7 @@ Usage:
     git clone https://github.com/geoffleyland/heroku-buildpack-openresty-template.git
     cd heroku-buildpack-openresty-template
     heroku apps:create hbo-template
-    heroku buildpack:set https://github.com/geoffleyland/heroku-buildpack-openresty
+    heroku buildpacks:set https://github.com/geoffleyland/heroku-buildpack-openresty
     git push heroku master
 
 (you'll need to change the app name in `heroku app:create hbo-template`
