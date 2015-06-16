@@ -37,3 +37,6 @@ function reverse(s)
     function(status, text) { document.getElementById("reversed").innerHTML = text; });
 }
 
+request("GET", "/api/v0/env", null, null,
+    function(status, text) { document.getElementById("env").innerHTML = text; });
+
